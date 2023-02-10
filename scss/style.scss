@@ -46,6 +46,110 @@
     margin: 0 auto 32px;
   }
 }
+.products {
+  padding: 120px 0;
+  background: rgba($color: yellowgreen, $alpha: 0.4);
+  &__title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 80px;
+  }
+}
+.products-card {
+  max-width: 510px;
+  width: 100%;
+  min-height: 349px;
+  display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  &__content {
+    max-width: 330px;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 23px 14px;
+  }
+  &__info {
+    max-width: 180px;
+    width: 100%;
+    background: #404040;
+  }
+  &__img {
+    width: 283px;
+    height: 172px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin: auto;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+    margin-bottom: 12px;
+  }
+  &__size {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  &__count {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  &__colors {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  &__form {
+    display: flex;
+    gap: 0 10px;
+  }
+  &__input {
+    position: absolute;
+    appearance: none;
+    &:checked + .products-card__checkbox {
+      background: crimson;
+    }
+  }
+  &__checkbox {
+    width: 15px;
+    height: 16px;
+    background: #000;
+    cursor: pointer;
+  }
+  &__checkbox-gray {
+    background: #737373;
+  }
+  &__checkbox-red {
+    background: #9c0909;
+  }
+  &__item {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 149.4%;
+    color: #fff;
+    & + .products-card__item{
+      margin-top: 20px;
+    }
+  }
+  &__span{
+    font-weight: 400;
+  }
+}
 .catalog {
   padding: 120px 0;
   &__title {
@@ -55,6 +159,12 @@
     color: #000;
     text-align: center;
     margin-bottom: 56px;
+  }
+  img {
+    width: 177px;
+    height: 114px;
+    object-fit: cover;
+    margin: auto;
   }
   &__content {
     display: grid;
@@ -103,7 +213,7 @@
     padding: 1px 38px;
     margin-bottom: 53px;
   }
-  &__list{
+  &__list {
     padding: 0;
   }
   &__item + .production__item {
@@ -212,7 +322,7 @@
   }
 }
 .footer {
-  background: rgba($color: yellowgreen, $alpha: 0.4);
+  // background: rgba($color: yellowgreen, $alpha: 0.4);
   padding: 60px 0 31px;
   &__inner {
     display: grid;
